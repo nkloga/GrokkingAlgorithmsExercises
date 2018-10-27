@@ -31,7 +31,7 @@ public class Dijkstra {
 
 // Costs hashmap
         HashMap<String, Integer> costs = new HashMap<>();
-        int inf = 100*1000000;
+        int inf = Integer.MAX_VALUE;
         costs.put("A", 6);
         costs.put("B", 2);
         costs.put("End", inf);
@@ -80,7 +80,7 @@ public class Dijkstra {
     }
 
     public static HashMap<String,Integer> find_lowest_cost_node(HashMap<String, Integer> costs) {
-        int min = 1000000000;
+        int min = Integer.MIN_VALUE;
         String minKey = null;
         for (Map.Entry<String, Integer> entry : costs.entrySet()) {
             if (entry.getValue() < min) {
